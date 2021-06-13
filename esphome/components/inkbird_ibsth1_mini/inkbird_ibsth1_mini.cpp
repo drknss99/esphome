@@ -54,10 +54,7 @@ bool InkbirdIBSTH1_MINI::parse_device(const esp32_ble_tracker::ESPBTDevice &devi
     ESP_LOGVV(TAG, "parse_device(): manufacturer data element length is expected to be of length 7");
     return false;
   }
-  if ((mnfData.data[2] != 0) || (mnfData.data[6] != 8)) {
-    ESP_LOGVV(TAG, "parse_device(): unexpected data");
-    return false;
-  }
+
 
   // sensor output encoding
   // data[5] is a battery level
